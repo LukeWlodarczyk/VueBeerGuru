@@ -32,7 +32,7 @@ export default {
   width: 16px;
   height: 16px;
   background: #65d6ad;
-  animation: lds-heart-green 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: lds-heart-green 1.2s forwards cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .lds-heart-green div:after,
 .lds-heart-green div:before {
@@ -67,7 +67,7 @@ export default {
   width: 16px;
   height: 16px;
   background: #c6f7e2;
-  animation: lds-heart-green 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: lds-heart-grey 1.2s forwards cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .lds-heart-grey div:after,
 .lds-heart-grey div:before {
@@ -85,5 +85,47 @@ export default {
 .lds-heart-grey div:after {
   top: -12px;
   border-radius: 50% 50% 0 0;
+}
+
+@keyframes lds-heart-green {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes lds-heart-grey {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
 }
 </style>
