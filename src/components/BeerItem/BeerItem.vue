@@ -15,7 +15,7 @@
       <heart :color="'grey'" />
     </button>
     <button
-      class="bookmark-btn"
+      class="bookmark-btn bookmark-btn-shadow"
       v-show="isFavorite"
       @click.stop="removeFromFavorites"
     >
@@ -112,8 +112,14 @@ export default {
 
 .bookmark-btn {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 8px;
+  right: 28px;
+  outline: none;
+  transition: 0.6s;
+}
+
+.bookmark-btn-shadow:hover {
+  box-shadow: 0px 9px 50px 15px #65d6ad;
 }
 
 .bookmark-btn:hover {

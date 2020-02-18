@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div v-if="isGreen" class="lds-heart-green"><div></div></div>
     <div v-if="!isGreen" class="lds-heart-grey"><div></div></div>
   </div>
@@ -20,15 +20,12 @@ export default {
 .lds-heart-green {
   display: inline-block;
   position: relative;
-  width: 40px;
-  height: 40px;
   transform: rotate(45deg);
-  transform-origin: 20px 20px;
 }
 .lds-heart-green div {
-  top: 16px;
-  left: 16px;
   position: absolute;
+  top: 0px;
+  left: 0px;
   width: 16px;
   height: 16px;
   background: #65d6ad;
@@ -36,7 +33,7 @@ export default {
 }
 .lds-heart-green div:after,
 .lds-heart-green div:before {
-  content: ' ';
+  content: '';
   position: absolute;
   display: block;
   width: 16px;
@@ -55,15 +52,12 @@ export default {
 .lds-heart-grey {
   display: inline-block;
   position: relative;
-  width: 40px;
-  height: 40px;
   transform: rotate(45deg);
-  transform-origin: 20px 20px;
 }
 .lds-heart-grey div {
-  top: 16px;
-  left: 16px;
   position: absolute;
+  top: 0px;
+  left: 0px;
   width: 16px;
   height: 16px;
   background: #c6f7e2;
