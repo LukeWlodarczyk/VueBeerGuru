@@ -38,6 +38,9 @@ export default {
     searchTerm: '',
     timeout: null
   }),
+  mounted() {
+    this.getMyBeers();
+  },
   computed: {
     beers() {
       return this.$store.getters.beersByName;
@@ -59,6 +62,9 @@ export default {
     },
     getRandomBeer() {
       this.$store.dispatch('getRandomBeer');
+    },
+    getMyBeers() {
+      this.$store.dispatch('getMyBeers');
     },
     addToMyBeers(beer) {
       this.$store.dispatch('addToMyBeers', beer);
