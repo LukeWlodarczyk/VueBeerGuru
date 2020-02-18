@@ -5,7 +5,7 @@
         class="search-input"
         placeholder="IPA...."
         type="text"
-        v-model="searchTerm"
+        v-model.trim="searchTerm"
       />
       <button class="random-button" @click="getRandomBeer">Get random</button>
     </div>
