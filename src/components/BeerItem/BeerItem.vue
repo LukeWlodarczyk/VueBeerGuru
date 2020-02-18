@@ -7,10 +7,18 @@
     <div class="beer-tagline">
       {{ tagline }}
     </div>
-    <button class="bookmark-btn" v-if="!isFavorite" @click.stop="addToFavorite">
+    <button
+      class="bookmark-btn"
+      v-show="!isFavorite"
+      @click.stop="addToFavorite"
+    >
       <heart :color="'grey'" />
     </button>
-    <button class="bookmark-btn" v-else @click.stop="removeFromFavorites">
+    <button
+      class="bookmark-btn"
+      v-show="isFavorite"
+      @click.stop="removeFromFavorites"
+    >
       <heart :color="'green'" />
     </button>
   </div>
