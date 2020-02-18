@@ -14,7 +14,7 @@
         :myBeersIds="myBeersIds"
       />
     </div>
-    <app-loader v-if="beers.isLoadingMore" />
+    <app-loader v-if="beers.isLoadingMore && !beers.isLoading" />
     <observer v-on:intersect="getMoreBeers" />
   </div>
 </template>
